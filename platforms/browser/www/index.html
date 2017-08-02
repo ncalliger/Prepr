@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script type="text/javascript" src="cordova.js"></script>
+        <title>Prepr</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="methods.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    </head>
+
+    <body>
+        <div id="containter">
+          <div id="header">
+            Prepr
+          </div>
+          <div id="main">
+            <div id="unfinishedPrep">
+              <h2><b>Unfinished Prep</b></h2>
+
+              <script>
+              populatePrepNeeded(6);
+              </script>
+
+            </div>
+
+            <div id="divider">
+            </div>
+
+            <div id="finishedPrep">
+              <h2><b>Finished Prep</b></h2>
+
+              <script>
+                populatePrepFinished(5);
+              </script>
+
+            </div>
+          </div>
+
+
+        </div>
+    </body>
+</html>
