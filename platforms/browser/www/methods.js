@@ -1,26 +1,3 @@
-var employees = [
-  "Arty",
-  "Noah",
-  "Steve",
-  "Backup"
-];
-
-function readEmployees(i){
-
-  return employees[i];
-
-};
-
-
-
-
-
-
-
-
-
-
-
 function populatePrepNeeded(numberOfItems){
   for(var i = 0; i < numberOfItems; i++){
   document.write(
@@ -51,7 +28,7 @@ function populatePrepFinished(numberOfItems, id){
       "</tr>" +
       "<tr>" +
         "<td>" + "Small Boxes" + "</td>" +
-        "<td>" + "Arty" +employees[id]+ "</td>" +
+        "<td>" +employees[id]+ "</td>" +
       "</tr>" +
     "</table>" + "</li>" +
   "</ul>"

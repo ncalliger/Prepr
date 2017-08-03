@@ -4,9 +4,3 @@ var employees = [
   "Steve",
   "Backup"
 ];
-
-function readEmployees(i){
-
-  return employees[i];
-
-};
