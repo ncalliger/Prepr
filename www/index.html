@@ -18,6 +18,27 @@
         <div id="containter">
           <div id="header">
             Prepr
+
+              <!-- POP UP BUTTON FOR CHECK LIST -->
+                <a href="#myPopup" data-rel="popup"
+                  class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Pep Check List</a>
+              <!-- END POP UP BUTTON FOR CHECK LIST -->
+
+              <!-- CODE FOR CHECK LIST -->
+              <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+                  <form action="/action_page.php" method="get">
+                    <div>
+                      <h3>Check What Is Done</h3>
+                      <input type="checkbox" name="task" value="Large Boxes"> Large Boxes<br>
+                      <input type="checkbox" name="task" value="Cut Tomatoes" checked="checked"> Cut Tomatoes<br>
+                      <input type="submit" value="Submit">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- END CODE FOR CHECK LIST -->
+
+
           </div>
           <div id="main">
             <div id="unfinishedPrep">

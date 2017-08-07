@@ -14,6 +14,7 @@ function populatePrepFinished(numberOfItems, emp){
 }
 
 //function for creating individual task boxes.
+//This looks very dirty, will clean it up later.
 function createTaskBox(emp) {
   document.write(
   "<ul>" +
