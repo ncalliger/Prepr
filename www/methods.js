@@ -31,3 +31,15 @@ function createTaskBox(emp) {
   "</ul>"
   );
 }
+
+//This function creates the entirety of the checklist.
+function createCheckList(taskArray){
+  for(var i = 0;i < MasterTaskList.length; i++){
+  //This snippet creates an individual task in the checklist.
+    document.write(
+      "<label><input type=\"checkbox\" name=\"task\" value=\"Large Boxes\">" +
+      MasterTaskList[i] +
+      "</label>"
+    )
+  }
+}

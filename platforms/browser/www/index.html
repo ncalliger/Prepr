@@ -30,8 +30,9 @@
                   <form action="/action_page.php" method="get">
                     <div id="CheckList">
                       <h3>Check What Is Done</h3>
-                      <input type="checkbox" name="task" value="Large Boxes" checked="checked"> Large Boxes<br>
-                      <input type="checkbox" name="task" value="Cut Tomatoes" checked="checked"> Cut Tomatoes<br>
+                      <script>
+                        createCheckList(MasterTaskList);
+                      </script>
                       <input type="submit" value="Submit">
                     </div>
                   </form>
