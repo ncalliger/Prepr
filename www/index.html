@@ -18,6 +18,29 @@
         <div id="containter">
           <div id="header">
             Prepr
+
+              <!-- POP UP BUTTON FOR CHECK LIST -->
+              <br>
+                <a href="#myPopup" data-rel="popup"
+                  class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Pep Check List</a>
+              <!-- END POP UP BUTTON FOR CHECK LIST -->
+
+              <!-- CODE FOR CHECK LIST -->
+              <div data-role="popup" id="myPopup" class="ui-content">
+                  <form action="/action_page.php" method="get">
+                    <div id="CheckList">
+                      <h3>Check What Is Done</h3>
+                      <script>
+                        createCheckList(MasterTaskList);
+                      </script>
+                      <input type="submit" value="Submit">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- END CODE FOR CHECK LIST -->
+
+
           </div>
           <div id="main">
             <div id="unfinishedPrep">
@@ -28,7 +51,7 @@
               </script>
 
             </div>
-
+            <!--DIVIDES FINISHED AND UNFINISHED TASKS-->
             <div id="divider">
             </div>
 
@@ -36,7 +59,7 @@
               <h2><b>Finished Prep</b></h2>
 
               <script>
-                populatePrepFinished(5, 1);
+                populatePrepFinished(5, employees[2]);
               </script>
 
             </div>
