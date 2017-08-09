@@ -27,13 +27,17 @@
 
               <!-- CODE FOR TASKS CHECK LIST -->
               <div data-role="popup" id="tasksPopup" class="ui-content">
-                  <form action="/action_page.php" method="get">
+                  <form action="/action_page.php" method="get"> <!-- This is line I am butchering -->
                     <div id="CheckList">
                       <h3>Check What Is Done</h3>
                       <script>
                         createCheckList(MasterTaskList);
                       </script>
-                      <!--<input type="submit" value="Submit">-->
+                      <input type="submit" value="Submit">
+                      <script>
+                          finishedTasks = getSelectedChbox(tasksPopup); //sends selected checkboxes to array
+                          unfinishedTasks = getUnselectedChbox(tasksPopup); //sends unselected checkboxes to array
+                      </script>
                     </div>
                   </form>
                 </div>
@@ -54,6 +58,12 @@
                         createCheckList(employees);
                       </script>
                       <input type="submit" value="Submit">
+                      <script>
+                          activeEmployees = getSelectedChbox(workersPopup); //sends selected checkboxes to array
+
+                          onsubmit="setTimeout(function () { window.location.reload(); }, 10)"
+                      </script>
+
                     </div>
                   </form>
                 </div>
@@ -68,7 +78,8 @@
               <h2><b>Unfinished Prep</b></h2>
 
               <script>
-              populatePrepNeeded(6);
+              document.write("<h3>" + unfinishedTasks+ "</h3>"); //tests the getSelectedChbox function
+              populatePrepNeeded(unfinishedTasks.length);
               </script>
 
             </div>
@@ -80,7 +91,7 @@
               <h2><b>Finished Prep</b></h2>
 
               <script>
-                populatePrepFinished(5, employees[2]);
+                populatePrepFinished(finishedTasks.length);
               </script>
 
             </div>
