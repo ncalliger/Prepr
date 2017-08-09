@@ -21,27 +21,48 @@
 
               <!-- POP UP BUTTON FOR CHECK LIST -->
               <br>
-                <a href="#myPopup" data-rel="popup"
-                  class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Pep Check List</a>
+                <a href="#tasksPopup" data-rel="popup"
+                  class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Prep Checklist</a>
               <!-- END POP UP BUTTON FOR CHECK LIST -->
 
-              <!-- CODE FOR CHECK LIST -->
-              <div data-role="popup" id="myPopup" class="ui-content">
+              <!-- CODE FOR TASKS CHECK LIST -->
+              <div data-role="popup" id="tasksPopup" class="ui-content">
                   <form action="/action_page.php" method="get">
                     <div id="CheckList">
                       <h3>Check What Is Done</h3>
                       <script>
                         createCheckList(MasterTaskList);
                       </script>
+                      <!--<input type="submit" value="Submit">-->
+                    </div>
+                  </form>
+                </div>
+
+              <!-- END CODE FOR CHECK LIST -->
+
+              <!-- CODE FOR BUTTON FOR EMPLOYEE LIST -->
+                <a href="#workersPopup" data-rel="popup"
+                  class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Workers</a>
+              <!-- END CODE FOR BUTTON FOR EMPLOYEE LIST -->
+
+              <!-- CODE FOR WORKERS CHECK LIST -->
+              <div data-role="popup" id="workersPopup" class="ui-content">
+                  <form action="/action_page.php" method="get">
+                    <div id="CheckList">
+                      <h3>Check Who Is Working</h3>
+                      <script>
+                        createCheckList(employees);
+                      </script>
                       <input type="submit" value="Submit">
                     </div>
                   </form>
                 </div>
-              </div>
-              <!-- END CODE FOR CHECK LIST -->
-
-
+              <!-- END CODE FOR WORKERS CHECK LIST -->
+            </div>
           </div>
+
+
+
           <div id="main">
             <div id="unfinishedPrep">
               <h2><b>Unfinished Prep</b></h2>
